@@ -13,10 +13,10 @@
   <!-- <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
 
-  <?php include_once "include/bootcss.php"; ?>
+  <?php include_once "assets/bootcss.php"; ?>
 
   <!-- Template Main CSS File -->
-  <link href="include/assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 
 </head>
@@ -146,7 +146,7 @@
   <!-- <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
 
-  <?php include_once "include\bootjs.php";?>
+  <?php include_once "assets/bootjs.php";?>
 
 </body>
 

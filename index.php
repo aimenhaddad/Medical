@@ -4,13 +4,13 @@
 <head>
 
   <title>Medical</title>
-  <?php include_once "include/bootcss.php"; ?>
+  <?php include_once "assets/bootcss.php"; ?>
  <!-- Template Main CSS File -->
- <link href="include/assets/css/style.css" rel="stylesheet">
+ <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body  data-spy="scroll" data-target="#navbar-example" >
 <!-- ************************* NAVBAR ************************* -->
-<?php include_once "include/navbar_home.php";?>
+<?php include_once "assets/navbar_index.php";?>
 <!-- ############################## FIN NAV######################################## -->
  <!-- ======= Hero Section ======= -->
  <section id="hero" class="d-flex align-items-center">
@@ -110,7 +110,7 @@
       </div>
     </section><!-- End Team Section -->
 
-<?php include_once "include\bootjs.php";?>
+<?php include_once "assets\bootjs.php";?>
 <script>
 
 </script>
