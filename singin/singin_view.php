@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+     
     
     
     	<!-- Main Content -->
@@ -66,7 +66,7 @@
 						</form>
 					</div>
 					<div class="row">
-						<p>Don't have an account? <a href=".\singup\singup.php">Register Here</a></p>
+						<p>Don't have an account? <a href="../singup/singup_view.php">Register Here</a></p>
 					</div>
 				</div>
 			</div>

@@ -1,6 +1,5 @@
 <?php
-include "../crud/read.php";
-include_once "../assets/config.php";
+include "controle/read_programme.php";
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
 ?>
@@ -27,7 +26,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <!-- BUTTON ETAT -->
                 <div class="justify-left-left">
                     <div class="navbar-body">
-                        <a class="btn btn-outline-light" href="finish.php">Archives</a>
+                        <a class="btn btn-outline-light" href="../archives/archives_view.php">Archives</a>
                     </div>
                 </div>
                 <br>
@@ -51,47 +50,46 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                         <div class="col justify-content-center ">
 
                             <div class="main-content1">
-                                <div class="table-responsive ">
-                                    <table class="table ">
-                                        <thead class="thead">
+                                <table class="table   text-center">
+                                    <thead class="thead">
+                                        <tr>
+                                            <th scope="row">ID</th>
+                                            <th scope="row">Day</th>
+                                            <th scope="row">Date</th>
+                                            <th scope="row">Injection</th>
+                                            <th scope="row">Archive</th>
+                                            <th scope="row">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody  ">
+                                        <?php while ($rows = mysqli_fetch_assoc($result)) { ?>
                                             <tr>
-                                                <th scope="row">ID</th>
-                                                <th scope="row">Day</th>
-                                                <th scope="row">Date</th>
-                                                <th scope="row">Injection</th>
-                                                <th scope="row">Archive</th>
-                                                <th scope="row">Action</th>
+                                                <td><?= $rows['ID'];   ?></td>
+                                                <td><?= $rows['day'];   ?></td>
+                                                <td><?= $rows['date']; ?></td>
+                                                <td><?= $rows['name_injection']; ?></td>
+                                                <td>
+                                                    <a class="btn btn-default" href="../archives/controle/etat.php?id=<?php echo ($rows['ID'] . " & etat=" . $rows['etat']); ?>"><i class="far fa-check"></i> </a>
+                                                </td>
+
+                                                <td>
+                                                    <button class="btn btn-primary edit_injection"> <img src="..\assets\img\injection.png" width="19" height="20" class="d-inline-block align-top" alt=""></button>
+
+                                                    <button class="btn btn-primary modaledit"><i class="fas fa-pencil-alt"></i></button>
+                                                    <a class="btn btn-danger" href="controle/delete_day.php?id=<?= $rows['ID']; ?>"><i class="fas fa-trash-alt"></i></a>
+                                                </td>
+
+
+
+
                                             </tr>
-                                        </thead>
-                                        <tbody class="tbody  ">
-                                            <?php while ($rows = mysqli_fetch_assoc($result)) { ?>
-                                                <tr>
-                                                    <td><?= $rows['ID'];   ?></td>
-                                                    <td><?= $rows['day'];   ?></td>
-                                                    <td><?= $rows['date']; ?></td>
-                                                    <td><?= $rows['name_injection']; ?></td>
-                                                    <td>
-                                                        <a class="btn btn-default" href="etat.php?id=<?php echo ($rows['ID'] . " & etat=" . $rows['etat']); ?>"><i class="far fa-check"></i> </a>
-                                                    </td>
-
-                                                    <td>
-                                                        <button class="btn btn-primary edit_injection"> <img src="..\assets\img\injection.png" width="19" height="20" class="d-inline-block align-top" alt=""></button>
-
-                                                        <button class="btn btn-primary modaledit"><i class="fas fa-pencil-alt"></i></button>
-                                                        <a class="btn btn-danger" href="delete.php?id=<?= $rows['ID']; ?>"><i class="fas fa-trash-alt"></i></a>
-                                                    </td>
-
-
-
-
-                                                </tr>
-                                        <?php }
-                                        }
-                                        ?>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                    <?php }
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
                             </div>
+
                         </div>
                 </div>
                 <!-- #################################### FIN TABLE ####################################-->
@@ -129,7 +127,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                 <label data-error="wrong" data-success="right" for="start"><b>date</b></label>
                                 <input type="date" name="da" id="start" name="trip-start" value="2023-04-1" min="2023-01-01" class="form-control validate">
                             </div>
-                            
+
                             <div class="modal-footer d-flex justify-content-center">
                                 <button class="btn btn-primary" name="send">Add</button>
                                 <button class="btn btn-danger" data-dismiss="modal">Close</button>
@@ -286,7 +284,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         </script>
     <?php
 } else {
-    header("Location: ../index.php");
+    header("Location: ../singin/singin_view.php");
     exit();
 }
     ?>

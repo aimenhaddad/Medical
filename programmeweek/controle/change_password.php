@@ -3,7 +3,8 @@ session_start();
 
 if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
-    include "include/config.php";
+    include "../../assets/config.php";
+
 
 if (isset($_POST['op']) && isset($_POST['np'])
     && isset($_POST['c_np'])) {
@@ -20,13 +21,13 @@ if (isset($_POST['op']) && isset($_POST['np'])
 	$c_np = validate($_POST['c_np']);
     
     if(empty($op)){
-      header("Location: admin.php?error=Old Password is required");
+      header("Location: ../admin.php?error=Old Password is required");
 	  exit();
     }else if(empty($np)){
-      header("Location: admin.php?error=New Password is required");
+      header("Location: ../admin.php?error=New Password is required");
 	  exit();
     }else if($np !== $c_np){
-      header("Location: admin.php?error=The confirmation password  does not match");
+      header("Location: ../admin.php?error=The confirmation password  does not match");
 	  exit();
     }else {
     	// hashing the password
@@ -41,11 +42,11 @@ if (isset($_POST['op']) && isset($_POST['np'])
         	
         	$sql_2 =" UPDATE users SET `password`='$np' WHERE id='$id'";
         	mysqli_query($conn, $sql_2);
-        	header("Location: admin.php?success=Your password has been changed successfully");
+        	header("Location: ../admin.php?success=Your password has been changed successfully");
 	        exit();
 
         }else {
-        	header("Location: admin.php?error=Incorrect password");
+        	header("Location: ../admin.php?error=Incorrect password");
 	        exit();
         }
 
@@ -53,12 +54,12 @@ if (isset($_POST['op']) && isset($_POST['np'])
 
     
 }else{
-	header("Location: admin.php");
+	header("Location: ../admin.php");
 	exit();
 }
 
 }else{
-     header("Location: admin.php");
+     header("Location: ../admin.php");
      exit();
 }
 ?>
