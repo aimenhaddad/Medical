@@ -32,9 +32,10 @@
     <nav class="navbar navbar-dark ">
 
         <div class="navbar-header">
+            <a href="../index.php">
             <span class="navbar-brand"> <img src="../uploads/medical.png" width="30" height="30"
                     class="d-inline-block align-top" alt=""> Injection</span>
-
+              </a>
         </div>
 
         <ul class="nav nav-pills">

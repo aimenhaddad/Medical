@@ -38,81 +38,87 @@ include "read_user.php";
             <div class="section-title">
                 <h2>Hospital</h2>
                 <h3>Choose a <span>Hospital</span></h3>
-                <!-- <p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p> -->
-                <select name="wilaya" class="form-control col-md-4 float-right">
-                    <option value="">Select a wilaya</option>
-                    <option value="01">Adrar</option>
-                    <option value="02">Chlef</option>
-                    <option value="03">Laghouat</option>
-                    <option value="04">Oum El Bouaghi</option>
-                    <option value="05">Batna</option>
-                    <option value="06">Béjaïa</option>
-                    <option value="07">Biskra</option>
-                    <option value="08">Béchar</option>
-                    <option value="09">Blida</option>
-                    <option value="10">Bouira</option>
-                    <option value="11">Tamanrasset</option>
-                    <option value="12">Tébessa</option>
-                    <option value="13">Tlemcen</option>
-                    <option value="14">Tiaret</option>
-                    <option value="15">Tizi Ouzou</option>
-                    <option value="16">Alger</option>
-                    <option value="17">Djelfa</option>
-                    <option value="18">Jijel</option>
-                    <option value="19">Sétif</option>
-                    <option value="20">Saïda</option>
-                    <option value="21">Skikda</option>
-                    <option value="22">Sidi Bel Abbès</option>
-                    <option value="23">Annaba</option>
-                    <option value="24">Guelma</option>
-                    <option value="25">Constantine</option>
-                    <option value="26">Médéa</option>
-                    <option value="27">Mostaganem</option>
-                    <option value="28">M'Sila</option>
-                    <option value="29">Mascara</option>
-                    <option value="30">Ouargla</option>
-                    <option value="31">Oran</option>
-                    <option value="32">El Bayadh</option>
-                    <option value="33">Illizi</option>
-                    <option value="34">Bordj Bou Arréridj</option>
-                    <option value="35">Boumerdès</option>
-                    <option value="36">El Tarf</option>
-                    <option value="37">Tindouf</option>
-                    <option value="38">Tissemsilt</option>
-                    <option value="39">El Oued</option>
-                    <option value="40">Khenchela</option>
-                    <option value="41">Souk Ahras</option>
-                    <option value="42">Tipaza</option>
-                    <option value="43">Mila</option>
-                    <option value="44">Aïn Defla</option>
-                    <option value="45">Naâma</option>
-                    <option value="46">Aïn Témouchent</option>
-                    <option value="47">Ghardaïa</option>
-                    <option value="48">Relizane</option>
+                
+
+                <select name="wilaya" id="city" class="form-control col-md-4 float-right">
+                    <option value="all">Select a wilaya</option>
+                    <option value="Adrar">Adrar</option>
+                    <option value="Chlef">Chlef</option>
+                    <option value="Laghouat">Laghouat</option>
+                    <option value="Oum El Bouaghi">Oum El Bouaghi</option>
+                    <option value="Batna">Batna</option>
+                    <option value="Béjaïa">Béjaïa</option>
+                    <option value="Biskra">Biskra</option>
+                    <option value="Béchar">Béchar</option>
+                    <option value="Blida">Blida</option>
+                    <option value="Bouira">Bouira</option>
+                    <option value="Tamanrasset">Tamanrasset</option>
+                    <option value="Tébessa">Tébessa</option>
+                    <option value="Tlemcen">Tlemcen</option>
+                    <option value="Tiaret">Tiaret</option>
+                    <option value="Tizi Ouzou">Tizi Ouzou</option>
+                    <option value="Alger">Alger</option>
+                    <option value="Djelfa">Djelfa</option>
+                    <option value="Jijel">Jijel</option>
+                    <option value="Sétif">Sétif</option>
+                    <option value="Saïda">Saïda</option>
+                    <option value="Skikda">Skikda</option>
+                    <option value="Sidi Bel Abbès">Sidi Bel Abbès</option>
+                    <option value="Annaba">Annaba</option>
+                    <option value="Guelma">Guelma</option>
+                    <option value="Constantine">Constantine</option>
+                    <option value="Médéa">Médéa</option>
+                    <option value="Mostaganem">Mostaganem</option>
+                    <option value="M'Sila">M'Sila</option>
+                    <option value="Mascara">Mascara</option>
+                    <option value="Ouargla">Ouargla</option>
+                    <option value="Oran">Oran</option>
+                    <option value="El Bayadh">El Bayadh</option>
+                    <option value="Illizi">Illizi</option>
+                    <option value="Bordj Bou Arréridj">Bordj Bou Arréridj</option>
+                    <option value="Boumerdès">Boumerdès</option>
+                    <option value="El Tarf">El Tarf</option>
+                    <option value="Tindouf">Tindouf</option>
+                    <option value="Tissemsilt">Tissemsilt</option>
+                    <option value="El Oued">El Oued</option>
+                    <option value="Khenchela">Khenchela</option>
+                    <option value="Souk Ahras">Souk Ahras</option>
+                    <option value="Tipaza">Tipaza</option>
+                    <option value="Mila">Mila</option>
+                    <option value="Aïn Defla">Aïn Defla</option>
+                    <option value="Naâma">Naâma</option>
+                    <option value="Aïn Témouchent">Aïn Témouchent</option>
+                    <option value="Ghardaïa">Ghardaïa</option>
+                    <option value="Relizane">Relizane</option>
                 </select>
 
             </div>
 
 
 
-            <div class="row mt-3">
+            <div class="row mt-3" id="content_card" >
+           
                 <?php if (mysqli_num_rows($result)) {
                          while ($rows = mysqli_fetch_assoc($result)) { ?>
-                <div class="col-4 ">
-                    <div class="card text-white bg-light mb-3 ">
-                        <div class="pt-2  pl-2  text-dark">
-                            <img src="uploads\<?= $rows['user_img'];   ?>" width="50" height="50" alt=""><span> <?= $rows['name'];   ?></span>
-                        </div>
 
-                        <div class="card-body text-dark">
-                            <h5 class="card-title text-right "><?= $rows['wilaya'];   ?></h5>
-                            <a href="program-details.php?id=<?= $rows['id'];   ?>" class="btn btn-primary d-flex justify-content-center">Show Program</a>
+                <span class="<?= $rows['wilaya']?> col-4 " >
+                    
+                        <div class="card text-white bg-light mb-3  ">
+                            <div class="pt-2  pl-2  text-dark">
+                                <img src="uploads\<?= $rows['user_img'];   ?>" width="50" height="50" alt=""><span>
+                                    <?= $rows['name'];   ?></span>
+                            </div>
+
+                            <div class="card-body text-dark">
+                                <h5 class="card-title text-right "><?= $rows['wilaya'];   ?></h5>
+                                <a href="program-details.php?id=<?= $rows['id'];   ?>"
+                                    class="btn btn-primary d-flex justify-content-center">Show Program</a>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                </span> 
 
                 <?php } }  ?>
-
+           
             </div>
 
         </div>
@@ -120,7 +126,31 @@ include "read_user.php";
 
     <?php include_once "assets\bootjs.php";?>
     <script>
+    // Get the dropdown and the content elements
+    var dropdown = document.getElementById("city");
+    var content = document.getElementById("content_card");
 
+    // Attach onchange event listener to the dropdown
+    dropdown.onchange = function() {
+        // Get the selected value from the dropdown
+        var selectedValue = dropdown.value;
+
+        // Get all the content elements
+        var items = content.getElementsByTagName("span");
+
+        // Loop through all the content elements
+        for (var i = 0; i < items.length; i++) {
+            // Check if the current content element has the selected value as a class
+          console.log(items[i].classList+"  "+selectedValue);
+            if (selectedValue == "all" || items[i].classList.contains(selectedValue) ) {
+                // Show the content element if it matches the selected value
+                items[i].style.display = "block";
+            } else {
+                // Hide the content element if it doesn't match the selected value
+                items[i].style.display = "none";
+            }
+        }
+    }
     </script>
 
 

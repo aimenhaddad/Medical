@@ -51,7 +51,7 @@ if (empty($uname)) {
     
    
    else{
-   $sql1 = "INSERT INTO  users(id, user_name, password, name, wilaya, user_img) VALUES(null,'$uname','$pass','$name',$wilaya ,'$img')";
+   $sql1 = "INSERT INTO  users(id, user_name, password, name, wilaya, user_img) VALUES(null,'$uname','$pass','$name','$wilaya' ,'$img')";
       if (mysqli_query($conn, $sql1)) {
          header("Location: singup_view.php?success=your account has been created successfully");
         exit();

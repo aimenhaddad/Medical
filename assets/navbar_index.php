@@ -35,7 +35,7 @@
   </a>
   <form class="form-inline mr-4">
     <a href=".\singin\singin_view.php" class="btn btn-outline-primary btn-lg p-2  mr-2 text-primary" type="submit" > Sing In </a>
-    <a href=".\singup\singup.php"      class="btn btn-outline-primary btn-lg p-2   text-primary "    type="submit" > Sing Up </a>
+    <a href=".\singup\singup_view.php"      class="btn btn-outline-primary btn-lg p-2   text-primary "    type="submit" > Sing Up </a>
   </form>
 
 </nav>
