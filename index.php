@@ -39,8 +39,9 @@ include "read_user.php";
                 <h2>Hospital</h2>
                 <h3>Choose a <span>Hospital</span></h3>
                 
+<div class="d-flex align-items-center justify-content-center my-4 ">
 
-                <select name="wilaya" id="city" class="form-control col-md-4 float-right">
+                <select name="wilaya" id="city" class="form-control  justify-content-center ">
                     <option value="all">Select a wilaya</option>
                     <option value="Adrar">Adrar</option>
                     <option value="Chlef">Chlef</option>
@@ -91,12 +92,12 @@ include "read_user.php";
                     <option value="Ghardaïa">Ghardaïa</option>
                     <option value="Relizane">Relizane</option>
                 </select>
-
+                </div>
             </div>
 
 
 
-            <div class="row mt-3" id="content_card" >
+            <div class="row mt-3 gy-4 d-flex align-items-center justify-content-center" id="content_card" >
            
                 <?php if (mysqli_num_rows($result)) {
                          while ($rows = mysqli_fetch_assoc($result)) { ?>
@@ -105,8 +106,8 @@ include "read_user.php";
                     
                         <div class="card text-white bg-light mb-3  ">
                             <div class="pt-2  pl-2  text-dark">
-                                <img src="uploads\<?= $rows['user_img'];   ?>" width="50" height="50" alt=""><span>
-                                    <?= $rows['name'];   ?></span>
+                                <img class="border rounded-circle" src="uploads\<?= $rows['user_img'];   ?>" width="50" height="50" alt="">
+                                 <b class="pt-2  pl-2  text-dark"><?= $rows['name'];   ?></b>
                             </div>
 
                             <div class="card-body text-dark">

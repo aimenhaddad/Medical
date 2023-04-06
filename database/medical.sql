@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2023 at 02:07 PM
+-- Generation Time: Apr 06, 2023 at 04:03 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -33,17 +33,22 @@ CREATE TABLE `injection` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `injection_possible`
+-- Dumping data for table `injection`
 --
 
-CREATE TABLE `injection_possible` (
-  `id_injection_possible` int(11) NOT NULL,
-  `id_injection` int(11) NOT NULL,
-  `id_program` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+INSERT INTO `injection` (`id_injection`, `name_injection`, `id_user`) VALUES
+(3, 'Insulin', 1),
+(4, 'Epinephrine', 1),
+(5, 'Pfizer-BioNTech', 1),
+(6, 'COVID-19', 1),
+(7, 'Morphine', 1),
+(8, 'Heparin', 1),
+(9, 'Vitamin B1', 1),
+(10, 'Adrenalin ', 1),
+(11, 'Insulin2', 1),
+(12, 'Insulin', 23),
+(13, 'Epinephrine', 23);
 
 -- --------------------------------------------------------
 
@@ -54,6 +59,7 @@ CREATE TABLE `injection_possible` (
 CREATE TABLE `program` (
   `day` varchar(50) NOT NULL,
   `date` date NOT NULL,
+  `name_injection` text DEFAULT NULL,
   `ID` int(11) NOT NULL,
   `etat` tinyint(1) DEFAULT 0,
   `id_user` int(11) NOT NULL
@@ -63,28 +69,15 @@ CREATE TABLE `program` (
 -- Dumping data for table `program`
 --
 
-INSERT INTO `program` (`day`, `date`, `ID`, `etat`, `id_user`) VALUES
-('test', '2021-08-18', 1, 1, 0),
-('add', '2021-08-16', 2, 0, 0),
-('test', '2021-08-17', 6, 0, 0),
-('test', '2022-08-19', 13, 0, 0),
-('test', '2021-08-21', 14, 0, 1),
-('dfdfv', '2021-08-24', 15, 0, 2),
-('DW2', '2021-08-13', 16, 1, 2),
-('desing', '2021-08-19', 17, 0, 3),
-('test3000', '2021-08-22', 21, 0, 1),
-('recete', '2021-08-23', 23, 0, 21),
-('edit', '2021-08-13', 24, 0, 20),
-('save', '2021-09-02', 25, 0, 20),
-('add', '2021-06-11', 26, 0, 21),
-('test', '2021-08-24', 27, 0, 1),
-('test', '2021-08-13', 28, 1, 1),
-('test6', '2021-08-26', 29, 1, 1),
-('yy', '2021-08-13', 30, 1, 1),
-('trhrt', '2021-08-25', 31, 0, 1),
-('aa', '2021-08-13', 32, 1, 1),
-('ggg', '2021-08-13', 33, 1, 1),
-('new', '2021-08-13', 34, 1, 1);
+INSERT INTO `program` (`day`, `date`, `name_injection`, `ID`, `etat`, `id_user`) VALUES
+('Sunday', '2023-04-28', 'COVID-19, Morphine, Heparin ', 37, 0, 1),
+('Wednesday', '2023-04-17', 'Morphine ,Insulin2 ', 40, 0, 1),
+('Monday', '2023-04-19', 'Vitamin B1 , Adrenalin ', 41, 0, 1),
+('Tuesday', '2023-04-25', 'Morphine ', 42, 0, 1),
+('Friday', '2023-04-29', 'Pfizer-BioNTech ', 43, 0, 1),
+('Thursday', '2023-03-28', 'Epinephrine ', 44, 0, 1),
+('Saturday', '2023-04-22', 'Morphine , Heparin , Vitamin B1 ', 45, 0, 1),
+('Wednesday', '2023-04-05', '13 , 14', 46, 0, 25);
 
 -- --------------------------------------------------------
 
@@ -97,6 +90,7 @@ CREATE TABLE `users` (
   `user_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `wilaya` varchar(70) NOT NULL,
   `user_img` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -104,14 +98,11 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `user_name`, `password`, `name`, `user_img`) VALUES
-(1, 'aymen', '123', 'Aymen', '1png'),
-(2, 'yasser', '123456789', 'Yasser', '2png'),
-(3, 'saad', '678', 'saad', 'IMG-6123b9f6b2c705.78775966.jpg'),
-(5, 'ahmed', '123', 'ahmed', ''),
-(16, 'legend', '123', 'lol', ''),
-(21, 'haddad', '1234', 'maroi', 'IMG-6123c5794dde75.29413591.jpg'),
-(22, 'aaa', 'aaa', 'aaa', 'img');
+INSERT INTO `users` (`id`, `user_name`, `password`, `name`, `wilaya`, `user_img`) VALUES
+(1, 'user', 'user', 'Mohamed Boudiaf', 'Ouargla', '1.png'),
+(2, 'user1', 'user1', 'Military', 'Ouargla', '2.jpg'),
+(23, 'user2', 'user2', 'Old Military', 'Ouargla', '23.jpg'),
+(25, 'user3', 'user3', 'Almkhadma', 'Ouargla', '25.png');
 
 --
 -- Indexes for dumped tables
@@ -122,12 +113,6 @@ INSERT INTO `users` (`id`, `user_name`, `password`, `name`, `user_img`) VALUES
 --
 ALTER TABLE `injection`
   ADD PRIMARY KEY (`id_injection`);
-
---
--- Indexes for table `injection_possible`
---
-ALTER TABLE `injection_possible`
-  ADD PRIMARY KEY (`id_injection_possible`);
 
 --
 -- Indexes for table `program`
@@ -149,25 +134,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `injection`
 --
 ALTER TABLE `injection`
-  MODIFY `id_injection` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `injection_possible`
---
-ALTER TABLE `injection_possible`
-  MODIFY `id_injection_possible` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_injection` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `program`
 --
 ALTER TABLE `program`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
