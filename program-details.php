@@ -12,15 +12,20 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Program</title>
+    <title>Details</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
 
-    <?php include_once "assets/bootcss.php"; ?>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/css/css.css" rel="stylesheet" />
+    <link href="assets/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -110,8 +115,9 @@
 
     <!-- <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
-
-    <?php include_once "assets/bootjs.php"; ?>
+    <script src="assets/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="assets/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
