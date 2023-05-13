@@ -1,5 +1,5 @@
 body{
-	background-image:  rgb(50,152,238);
+	background-image:  #1977cc;
     font-family: sans-serif;
 }
 .main-content{
@@ -11,14 +11,14 @@ body{
 	display: flex;
 }
 .company__title{
-    background-color: #008080;
+    background-color: #1977cc;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	color: #fff; 
 }
 .company__info{
-	background-color: #008080;
+	background-color: #1977cc;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
 	display: flex;
@@ -67,7 +67,7 @@ form{
 	transition: all .5s ease;
 }
 .form__input:focus{
-	border-bottom-color: #008080;
+	border-bottom-color: #1977cc;
 	box-shadow: 0 0 5px rgba(0,80,80,.4); 
 	border-radius: 4px;
 }
@@ -75,16 +75,16 @@ form{
 	transition: all .5s ease;
 	width: 60%;
 	border-radius: 30px;
-	color:#008080;
+	color:#1977cc;
 	font-weight: 600;
 	background-color: #fff;
-	border: 1px solid #008080;
+	border: 1px solid #1977cc;
 	margin-top: 1.5em;
 	margin-bottom: 1em;
     margin-left: 4em;
 }
 .btn:hover, .btn:focus{
-	background-color: #008080;
+	background-color: #1977cc;
 	color:#fff;
 }
 

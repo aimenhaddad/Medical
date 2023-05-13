@@ -32,10 +32,10 @@
     <nav class="navbar navbar-dark ">
 
         <div class="navbar-header">
-            <a href="../index.php">
-            <span class="navbar-brand"> <img src="../uploads/medical.png" width="30" height="30"
-                    class="d-inline-block align-top" alt=""> Injection</span>
-              </a>
+            <a class="navbar-brand m-2" href="../index.php">
+                <img class="border rounded-circle" src="../assets/img/injection.svg" alt="" height="50" width="50">
+                <b>Injection Management System</b>
+            </a>
         </div>
 
         <ul class="nav nav-pills">
@@ -86,8 +86,7 @@
                             <input type="file" name="my_image" class="form-control" />
                             <br>
                             <div class=" d-flex justify-content-end m-3">
-                                <input type="submit" name="submit" value="Upload"
-                                    class="btn btn-primary " />
+                                <input type="submit" name="submit" value="Upload" class="btn btn-primary " />
                             </div>
                 </form>
             </div>
@@ -111,9 +110,9 @@
                 <label>Confirm New Password</label>
                 <input type="password" name="c_np" placeholder="Confirm New Password" class="form-control" />
                 <br>
-                
+
                 <div class=" d-flex justify-content-end my-3">
-                <button type="submit"  class="btn btn-primary ">Save</button>
+                    <button type="submit" class="btn btn-primary ">Save</button>
                 </div>
 
             </form>

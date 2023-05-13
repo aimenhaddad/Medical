@@ -1,5 +1,6 @@
 <?php if (isset($_GET['id'])) {
   $id_user = $_GET['id'];
+  $name = $_GET['name'];
   include "assets/config.php";
   $sql = "SELECT day, date, name_injection, ID   FROM program WHERE id_user=$id_user AND etat=0;";
   $result = mysqli_query($conn, $sql);
@@ -12,7 +13,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Details</title>
+    <title><?= $name?></title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -42,12 +43,12 @@
 
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
-        <div class="container d-flex align-items-center justify-content-between">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
 
-            <h1 class="logo"><a href="index.php">Medical<span>.</span></a></h1>
+            
             <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt=""></a>-->
-
+             <a href="index.php" ><img class="border rounded-circle" src="assets/img/injection.svg" alt="" height="50" width="50"> <b>Injection Management System</b></a>
+         
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto " href="index.php">Home</a></li>
@@ -60,13 +61,20 @@
     </header><!-- End Header -->
 
     <main id="main" data-aos="fade-up">
-
+                
         <!-- ======= Breadcrumbs Section ======= -->
 
         <!-- ======= Portfolio Details Section ======= -->
-        <section id="portfolio-details" class="portfolio-details">
+        <section id="services" class="d-flex align-items-center"> 
             <div class="container">
+                
+            <div class="section-title">
+               
+                <h3>Weekly Planner for <span><?=$name?></span></h3>
 
+               
+            </div>
+           
                 <div class="row gy-4 d-flex align-items-center justify-content-center">
                     <?php if (mysqli_num_rows($result)) {
               while ($rows = mysqli_fetch_assoc($result)) { ?>
@@ -102,19 +110,30 @@
 
     </main><!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
+>
+    
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
 
-        <div class="container py-4 ">
-            <div class="copyright  ">
-                &copy; Copyright <strong><span>Me</span></strong>. All Rights Reserved
-            </div>
+   
 
+    <div class="container d-md-flex py-4">
+
+      
+      
+    </div>
+  </footer><!-- End Footer -->
+  <footer class="footer fixed-bottom">
+  <div class="container">
+  <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+        &copy; Copyright <strong><span>Me</span></strong>. All Rights Reserved
         </div>
-    </footer><!-- End Footer -->
+      </div>
+  </div>
+</footer>
 
-    <!-- <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+
     <script src="assets/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="assets/bootstrap/4.5.2/js/bootstrap.min.js"></script>

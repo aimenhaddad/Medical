@@ -17,8 +17,8 @@
 	<div class="container-fluid">
 		<div class="row main-content bg-success text-center">
 			<div class="col-md-4 text-center company__info">
-				<span class="company__logo"><h2><img class="rounded-circle" height="100px" width="100px" src="../assets/img/injection.png" alt=""></h2></span>
-				<h4 class="company_title">Injection</h4>
+				<span class="company__logo"><h2><img class="rounded-circle" height="100px" width="100px" src="../assets/img/injection.svg" alt=""></h2></span>
+				<h4 class="company_title">Injection Management System</h4>
 			</div>
 			<div class="col-md-8 col-xs-12 col-sm-12 login_form ">
 				<div class="container-fluid">

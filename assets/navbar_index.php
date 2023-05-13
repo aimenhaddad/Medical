@@ -30,8 +30,7 @@
 <nav class="navbar navbar-light bg-light ">
   
   <a class="navbar-brand m-2" href="#" >
-    <img src="uploads\medical.png" width="50" height="50" class="d-inline-block align-top" alt="">
-    Medical
+  <img class="border rounded-circle" src="assets/img/injection.svg" alt="" height="50" width="50"> <b>Injection Management System</b>
   </a>
   <form class="form-inline mr-4">
     <a href=".\singin\singin_view.php" class="btn btn-outline-primary btn-lg p-2  mr-2 text-primary" type="submit" > Sing In </a>

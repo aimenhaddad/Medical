@@ -8,7 +8,7 @@ include "read_user.php";
 
 <head>
 
-    <title>Medical</title>
+    <title>Injection Management System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS only -->
@@ -25,12 +25,12 @@ include "read_user.php";
 
 <body data-spy="scroll" data-target="#navbar-example">
     <!-- ************************* NAVBAR ************************* -->
-    <?php include_once "assets/navbar_index.php";?>
+    <?php include_once "assets/navbar_index.php"; ?>
     <!-- ############################## FIN NAV######################################## -->
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
-            <h1>Welcome to <span>Medical</span></h1>
+            <h1>Welcome to <span>Injection Management System</span></h1>
             <h2>This site helps you to know the injections that are in hospitals every week</h2>
             <div class="d-flex">
                 <a href="#injection" class="btn-get-started scrollto">Get Started</a>
@@ -40,13 +40,13 @@ include "read_user.php";
     </section><!-- End Hero -->
 
     <!-- ######################################################################################## -->
-    <!-- ======= Team Section ======= -->
-    <section id="injection" class="team section-bg">
-        <div class="container" data-aos="fade-up">
+
+    <section id="services" class="services">
+        <div class="container">
 
             <div class="section-title">
                 <h2>Hospital</h2>
-                <h3>Choose a <span>Hospital</span></h3>
+                <h3>Select the <span>Hospital</span> whose program you want to know</h3>
 
                 <div class="d-flex align-items-center justify-content-center my-4 ">
 
@@ -106,63 +106,64 @@ include "read_user.php";
 
 
 
-            <div class="row mt-3 gy-4 d-flex align-items-center justify-content-center" id="content_card">
+
+
+
+            <div class="row" id="content_card">
 
                 <?php if (mysqli_num_rows($result)) {
-                         while ($rows = mysqli_fetch_assoc($result)) { ?>
+                    while ($rows = mysqli_fetch_assoc($result)) { ?>
 
-                <span class="<?= $rows['wilaya']?> col-4 ">
+                        <span class="<?= $rows['wilaya'] ?> col-lg-4 col-md-6 d-flex align-items-stretch " >
+                            
+                                <div class="icon-box" style="min-width: 350px;">
+                                    <div class="icon">
+                                        <img class="border rounded-circle" src="uploads\<?= $rows['user_img'];?>" height="100" width="100" >
+                                    </div>
+                                    <h4><a href="program-details.php?id=<?= $rows['id'];?>&name=<?= $rows['name'];   ?>"> <?= $rows['name'];   ?></a></h4>
+                                     <p><?= $rows['wilaya'];  ?></p>
+                                </div>
+                           
 
-                    <div class="card text-white bg-light mb-3  ">
-                        <div class="pt-2  pl-2  text-dark">
-                            <img class="border rounded-circle" src="uploads\<?= $rows['user_img'];   ?>" width="50"
-                                height="50" alt="">
-                            <b class="pt-2  pl-2  text-dark"><?= $rows['name'];   ?></b>
-                        </div>
 
-                        <div class="card-body text-dark">
-                            <h5 class="card-title text-right "><?= $rows['wilaya'];   ?></h5>
-                            <a href="program-details.php?id=<?= $rows['id'];   ?>"
-                                class="btn btn-primary d-flex justify-content-center">Show Program</a>
-                        </div>
-                    </div>
-                </span>
+                        </span>
 
-                <?php } }  ?>
+                <?php }
+                }  ?>
+
 
             </div>
-
         </div>
     </section><!-- End Team Section -->
     <script src="assets/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="assets/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-    // Get the dropdown and the content elements
-    var dropdown = document.getElementById("city");
-    var content = document.getElementById("content_card");
+        // Get the dropdown and the content elements
+        var dropdown = document.getElementById("city");
+        var content = document.getElementById("content_card");
 
-    // Attach onchange event listener to the dropdown
-    dropdown.onchange = function() {
-        // Get the selected value from the dropdown
-        var selectedValue = dropdown.value;
+        // Attach onchange event listener to the dropdown
+        dropdown.onchange = function() {
+            // Get the selected value from the dropdown
+            var selectedValue = dropdown.value;
 
-        // Get all the content elements
-        var items = content.getElementsByTagName("span");
+            // Get all the content elements
+            var items = content.getElementsByTagName("span");
 
-        // Loop through all the content elements
-        for (var i = 0; i < items.length; i++) {
-            // Check if the current content element has the selected value as a class
-            console.log(items[i].classList + "  " + selectedValue);
-            if (selectedValue == "all" || items[i].classList.contains(selectedValue)) {
-                // Show the content element if it matches the selected value
-                items[i].style.display = "block";
-            } else {
-                // Hide the content element if it doesn't match the selected value
-                items[i].style.display = "none";
+            // Loop through all the content elements
+            for (var i = 0; i < items.length; i++) {
+                // Check if the current content element has the selected value as a class
+                console.log(items[i].classList + "  " + selectedValue);
+                if (selectedValue == "all" || items[i].classList.contains(selectedValue)) {
+                    // Show the content element if it matches the selected value
+                    items[i].style.display = "block";
+                } else {
+                    // Hide the content element if it doesn't match the selected value
+                    items[i].style.display = "none";
+                }
             }
         }
-    }
     </script>
 
 
