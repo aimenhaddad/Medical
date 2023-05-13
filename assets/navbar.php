@@ -29,12 +29,12 @@
 
 
 
-    <nav class="navbar navbar-dark ">
+    <nav class="navbar  navbar-light bg-light  ">
 
         <div class="navbar-header">
-            <a class="navbar-brand m-2" href="../index.php">
+            <a class="navbar-brand ml-2" href="../index.php">
                 <img class="border rounded-circle" src="../assets/img/injection.svg" alt="" height="50" width="50">
-                <b>Injection Management System</b>
+                <b >Injection Management System</b>
             </a>
         </div>
 
@@ -49,9 +49,9 @@
 
           if (mysqli_num_rows($res) > 0) {
           	while ($images = mysqli_fetch_assoc($res)) {  ?>
-                <img src="../uploads/<?=$images['user_img']?>" class="rounded-circle" height="40" width="40">
+                <img src="../uploads/<?=$images['user_img']?>" class="border rounded-circle" height="50" width="50">
                 <?php } }?>
-                <span class="colo"> <?php echo " ". $_SESSION['name']; ?> </span>
+                <span class="colo text-dark"> <?php echo " ". $_SESSION['name']; ?> </span>
 
                 <span class="btn btn-lg  dropdown-toggle" data-toggle="dropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">

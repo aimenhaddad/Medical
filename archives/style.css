@@ -1,16 +1,7 @@
     *{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
       }
-    body{
-       
-        background: radial-gradient(circle, #086cc1 36%, #093879 91%); 
-        width:100%;
-        position: relative;
-        background-size:cover ;
-        background-position: center;
-        overflow: auto;
-     
-    }
+   
     .main-content1{
       justify-content:center;
       background-color: rgba(255, 255, 255, 0.63);

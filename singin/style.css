@@ -68,7 +68,7 @@ form{
 }
 .form__input:focus{
 	border-bottom-color: #1977cc;
-	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	box-shadow: 0 0 5px rgba(13, 107, 214, 0.911); 
 	border-radius: 4px;
 }
 .btn{

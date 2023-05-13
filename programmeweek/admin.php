@@ -14,26 +14,26 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
         <link rel="stylesheet" href="style.css">
     </head>
 
-    <body data-spy="scroll" data-target="#navbar-example">
+    <body data-spy="scroll" data-target="#navbar-example"  style=" background: #fff; ">
         <!-- ************************* NAVBAR ************************* -->
         <?php include_once "../assets/navbar.php"; ?>
         <!-- ############################## FIN NAV######################################## -->
 
         <!-- ************************* MY TASK ************************* -->
         <div class="main-content">
-            <div class="container-fluid">
+            <div class="container-fluid"  style=" background:rgba(255, 255, 255, 0.63); ">
                 <!-- ************************* MY TASK  HEAD *************************-->
                 <!-- BUTTON ETAT -->
                 <div class="justify-left-left">
                     <div class="navbar-body">
-                        <a class="btn btn-outline-light" href="../archives/archives_view.php">Archives</a>
+                        <a class="btn btn-outline-dark" href="../archives/archives_view.php">Archives</a>
                     </div>
                 </div>
                 <br>
                 <!-- ************************* TITLE && BTN ADD TASK ************************* -->
                 <div class="row ">
                     <div class="col ">
-                        <h2 class="text-center text-white">Programme This Week</h2>
+                        <h2 class="text-center ">Programme This Week</h2>
                         <br>
                         <button class="btn btn-success float-right " data-toggle="modal" data-target="#modalRegisterForm">New <i class="fas fa-plus"></i></button>
                         <button class="btn btn-success float-right mr-2" data-toggle="modal" data-target="#modalInjection">New <img src="..\assets\img\injection.png" width="19" height="20" class="d-inline-block align-top" alt=""> </button>
@@ -45,7 +45,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                 <!-- ************************* TABLE   ************************* -->
 
                 <div class="row ">
-                    <?php if (mysqli_num_rows($result)) { ?>
+                   
 
                         <div class="col justify-content-center ">
 
@@ -61,6 +61,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                             <th scope="row">Action</th>
                                         </tr>
                                     </thead>
+                                     <?php if (mysqli_num_rows($result)) { ?>
                                     <tbody class="tbody  ">
                                         <?php while ($rows = mysqli_fetch_assoc($result)) { ?>
                                             <tr>
@@ -69,7 +70,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                                 <td><?= $rows['date']; ?></td>
                                                 <td><?= $rows['name_injection']; ?></td>
                                                 <td>
-                                                    <a class="btn btn-default" href="../archives/controle/etat.php?id=<?php echo ($rows['ID'] . " & etat=" . $rows['etat']); ?>"><i class="far fa-check"></i> </a>
+                                                    <a class="btn btn-default" href="../archives/controle/etat.php?id=<?php echo ($rows['ID'] . " & etat=" . $rows['etat']); ?>"><i class="fas fa-check"></i> </a>
                                                 </td>
 
                                                 <td>

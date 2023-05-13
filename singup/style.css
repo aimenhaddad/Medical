@@ -68,7 +68,7 @@ form{
 }
 .form__input:focus{
 	border-bottom-color: #1977cc;
-	box-shadow: 0 0 5px rgba(0,80,80,.4); 
+	box-shadow: 0 0 5px rgb(0, 153, 255); 
 	border-radius: 4px;
 }
 .btn{
@@ -84,7 +84,7 @@ form{
     margin-left: 4em;
 }
 .btn:hover, .btn:focus{
-	background-color: #1977cc;
+	background-color: #137bd6;
 	color:#fff;
 }
 

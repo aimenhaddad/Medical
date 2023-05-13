@@ -15,11 +15,11 @@
 
     <!-- Main Content -->
     <div class="container-fluid">
-        <div class="row main-content bg-success text-center">
-            <div class="col-md-4 text-center company__info">
+        <div class="row main-content  text-center" >
+            <div class="col-md-4 text-center company__info"style="background-color: #1977cc">
                 <span class="company__logo">
-                    <h2><img class="border rounded-circle" height="100px" width="100px" src="../assets/img/injection.svg"
-                            alt=""></h2>
+                    <h2><a href="../index.php"><img class="border rounded-circle" height="100px" width="100px" src="../assets/img/injection.svg"
+                            alt=""></a></h2>
                 </span>
                 <h4 class="company_title">Injection Management System</h4>
             </div>

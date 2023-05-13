@@ -15,16 +15,16 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style=" background: #fff; ">
 
     <?php include_once "../assets/navbar.php";?>
 
     <div class="main-content">
-        <div class="container-fluid">
+        <div class="container-fluid" style=" background:rgba(255, 255, 255, 0.63); ">
             <div class="justify-left-left">
                 <div class="navbar-body">
 
-                    <a class="btn btn-outline-light" href="../programmeweek/admin.php">This Week</a>
+                    <a class="btn btn-outline-dark" href="../programmeweek/admin.php">This Week</a>
                 </div>
             </div>
             <h2 class="text-center task">Archives</h2>
@@ -34,7 +34,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
             <div class="row justify-content-center">
                 <div class="col-12">
 
-                    <?php if (mysqli_num_rows($result)) {?>
+                   
 
                     <div class="main-content1">
                         <table class="table   text-center">
@@ -45,13 +45,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
                                     <th scope="row">Day</th>
                                     <th scope="row">Date</th>
                                     <th scope="row">Injection</th>
-                                    <th scope="row">Archive</th>
+                                    <th scope="row">unarchive</th>
 
                                 </tr>
                             </thead>
+                            <?php if (mysqli_num_rows($result)) {?>
                             <tbody class="tbody">
                                 <?php while ($rows=mysqli_fetch_assoc($result)) { ?>
-                                <tr>
+                                <tr> 
 
                                     <td><?= $rows['ID'];   ?></td>
                                     <td><?= $rows['day'];   ?></td>
@@ -60,8 +61,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
                                     <td>
                                         <a class="btn btn-default"
-                                            href="controle/etat.php?id=<?php echo( $rows['ID']." & etat=".$rows['etat']);?>"><i
-                                                class="fa fa-times"></i> </a>
+                                            href="controle/etat.php?id=<?php echo( $rows['ID']." & etat=".$rows['etat']);?>"><i class="fa-solid fa-x"></i> </a>
                                     </td>
                                 </tr>
                                 <?php } } ?>

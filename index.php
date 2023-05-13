@@ -33,7 +33,7 @@ include "read_user.php";
             <h1>Welcome to <span>Injection Management System</span></h1>
             <h2>This site helps you to know the injections that are in hospitals every week</h2>
             <div class="d-flex">
-                <a href="#injection" class="btn-get-started scrollto">Get Started</a>
+                <a href="#services" class="btn-get-started scrollto">Get Started</a>
 
             </div>
         </div>
@@ -114,9 +114,9 @@ include "read_user.php";
                 <?php if (mysqli_num_rows($result)) {
                     while ($rows = mysqli_fetch_assoc($result)) { ?>
 
-                        <span class="<?= $rows['wilaya'] ?> col-lg-4 col-md-6 d-flex align-items-stretch " >
+                        <span class="<?= $rows['wilaya'] ?> col-lg-4  col-md-6 " >
                             
-                                <div class="icon-box" style="min-width: 350px;">
+                                <div class="icon-box  " style="min-width: 350px;">
                                     <div class="icon">
                                         <img class="border rounded-circle" src="uploads\<?= $rows['user_img'];?>" height="100" width="100" >
                                     </div>
