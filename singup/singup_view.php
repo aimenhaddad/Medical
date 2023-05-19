@@ -47,7 +47,7 @@
 
                     <form action="singup_control.php" method="POST" class="form-group">
                         <div class="row">
-                            <input type="text" name="name" class="form__input" placeholder="Name Hospital " required>
+                            <input type="text" name="name" class="form__input" placeholder="Name الجوارية " required>
                         </div>
                         <div class="row  ">
                             <select name="wilaya" id="mySelect" class="form-control col-md-4 float-right" required>
